@@ -22,7 +22,7 @@
 - has_many :messages
 
 
-## ## groups_users
+## groups_users
 
 |Column|Type|Options|
 |------|----|-------|
