@@ -8,6 +8,8 @@
 
 .side-bar {
   width: 300px;
+  color: #ffffff;
+  font-weight: bold;
   &__user-name {
     height: 100px;
     background-color: #253141;
@@ -19,41 +21,80 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
     line-height: 20px;
-    color: #ffffff;
-      &__right {
-        width: 60px;
-        display: flex;
-        justify-content: flex-end;
-        &__btn {
-          color: #ffffff;
-          text-decoration: none;
-          &--edit {
-            margin-right: 5px;
-          }
-        }
+    &__right {
+      width: 60px;
+      font-size: medium;
+      display: flex;
+      justify-content: flex-end;
+      &__btn {
+      color: #ffffff;
+      text-decoration: none;
+      &--edit {
+      margin-right: 5px;
       }
       }
+    }
+  }
   }
   &__group-list {
-  height: calc(100vh - 100px);
-  background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    font-weight: normal;
+    padding: 20px 20px 0 20px;
+    %base-group-name {
+      width: 260px;
+      padding-bottom: 40px;
+      font-size: 15px;
+    }
+    %base-new-message {
+      font-size: 11px;
+      margin-top: 5px;
+    }
+    .group-name {
+      @extend %base-group-name;
+    }
+    .new-message {
+      @extend %base-new-message;
+    }
+    .group-name2 {
+      @extend %base-group-name;
+    }
+    .new-message2 {
+      @extend %base-new-message;
+    }
   }
 }
 
 .chat-main {
   width: calc(100vw - 300px);
-  &__group-info {
+  display: block;
+  &__header {
     height: 100px;
+    padding: 0 40px;
+    overflow: scroll;
     background-color: #ffffff;
     border: solid 1px #eeeeee;
   }
-  &__message-list {
+  &__messages {
   height: calc(100vh - 190px);
   background-color: #fafafa;
   }
-  &__message-form {
+  &__form {
     height: 90px;
     background-color: #d2d2d2;
+  }
+}
+.chat-main__header__left-box {
+  margin-top: 35px;
+  &__group {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 15px;;
+  }
+  &__members {
+    font-size: 12px;
+    color: #999999;
   }
 }
