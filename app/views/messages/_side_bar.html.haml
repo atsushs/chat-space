@@ -1,0 +1,11 @@
+.side-bar
+  .side-bar__user-name
+    .name-box
+      .name-box__left
+        名前
+      .name-box__right
+        = link_to "#", class: "name-box__right__btn name-box__right__btn--edit" do
+          = icon('far fa-edit', class: "name-box__right__btn--icon")
+        = link_to "#", class: "name-box__right__btn" do
+          = icon('fas fa-cog',  class: "name-box__right__btn--icon")
+  .side-bar__group-list
