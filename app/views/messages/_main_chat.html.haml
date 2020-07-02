@@ -15,3 +15,10 @@
       %p.chat-main__messages__upper-info__date 2020/07/01(Mon) 00:00:00
     %p.chat-main__messages__text テキスト
   .chat-main__form
+    = form_tag("/messages", method: :post, class:"new-message") do
+      .input-box
+        %input.input-box__text(type="text" placeholder="type a message")/
+        %label.input-box__image
+          = icon('fas', 'image')
+          %input.input-box__image__file{type: "file"}
+      %input.chat-main__form__submit-btn(type="submit" value="Send")/
