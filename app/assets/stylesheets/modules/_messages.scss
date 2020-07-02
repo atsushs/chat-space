@@ -80,21 +80,58 @@
   &__messages {
   height: calc(100vh - 190px);
   background-color: #fafafa;
+  padding: 35px 40px;
+  overflow: scroll;
   }
   &__form {
     height: 90px;
     background-color: #d2d2d2;
   }
 }
+.chat-main__header {
+  display: flex;
+  justify-content: space-between;
+}
 .chat-main__header__left-box {
-  margin-top: 35px;
   &__group {
     font-size: 20px;
     color: #333333;
-    margin-bottom: 15px;;
+    margin: 35px 0 15px;
   }
   &__members {
     font-size: 12px;
     color: #999999;
   }
+  &__btn {
+    $color-main-edit: #38aef0;
+    height: 40px;
+    width: 72px;
+    line-height: 40px;
+    margin-top: 28px;
+    padding-left: 20px;
+    border: solid 1px $color-main-edit;
+    font-size: 16px;
+    color: $color-main-edit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+.chat-main__messages__upper-info {
+  display: flex;
+  margin-bottom: 12px;
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+  }
+  &__date {
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px;
+  }
+}
+.chat-main__messages__text {
+  font-size: 14px;
+  color: #434A54;
+  margin-bottom: 46px;
 }

@@ -1,7 +1,17 @@
 .chat-main
   .chat-main__header
     .chat-main__header__left-box
-    %h2.chat-main__header__left-box__group グループ名
-    %ul.chat-main__header__left-box__members 名前
+      %h2.chat-main__header__left-box__group グループ名
+      %ul.chat-main__header__left-box__members 名前
+    = link_to "#", class: "chat-main__header__left-box__btn" do
+      Edit
   .chat-main__messages
+    .chat-main__messages__upper-info
+      %p.chat-main__messages__upper-info__name 名前
+      %p.chat-main__messages__upper-info__date 2020/07/01(Mon) 00:00:00
+    %p.chat-main__messages__text テキスト
+    .chat-main__messages__upper-info
+      %p.chat-main__messages__upper-info__name 名前
+      %p.chat-main__messages__upper-info__date 2020/07/01(Mon) 00:00:00
+    %p.chat-main__messages__text テキスト
   .chat-main__form
