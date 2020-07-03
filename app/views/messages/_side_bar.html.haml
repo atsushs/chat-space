@@ -1,19 +1,17 @@
 .side-bar
-  .side-bar__user-name
-    .name-box
-      .name-box__left
-        名前
-      .name-box__right
-        = link_to "#", class: "name-box__right__btn name-box__right__btn--edit" do
-          = icon('far fa-edit', class: "contents__btn--icon")
-        = link_to "#", class: "name-box__right__btn" do
-          = icon('fas fa-cog', class: "contents__btn--icon")
-  .side-bar__group-list
-    .group-name
-      グループ名1
-      .new-message
-        新着メッセージ1
-    .group-name2
-      グループ名2
-      .new-message2
-        新着メッセージ2
+  .side-bar__header
+    .side-bar__header__box
+      %p.side-bar__header__box__user-name 名前
+      .side-bar__header__box__menu
+        = link_to "#", class: "menu__icon" do
+          = icon('far fa-edit', class: "menu__edit__btn")
+        = link_to "#", class: "menu__icon" do
+          = icon('fas fa-cog', class: "menu__cog__btn")
+  .side-bar__groups
+    .side-bar__groups__box
+      %p.side-bar__groups__box__group-name グループ名
+      %p.side-bar__groups__box__latest-message 新着メッセージ
+    .side-bar__groups__box
+      %p.side-bar__groups__box__group-name グループ名
+      %p.side-bar__groups__box__latest-message 新着メッセージ
+
