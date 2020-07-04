@@ -8,7 +8,7 @@
 
 .side-bar {
   width: 300px;
-  color: $color-white;
+  color: $white;
 
   &__header {
     height: 100px;
@@ -30,7 +30,7 @@
 }
 
 .menu__icon {
-  color: $color-white;
+  color: $white;
   text-decoration: none;
   font-size: 15px;
 }
@@ -63,7 +63,7 @@
     height: 100px;
     padding: 0 40px;
     overflow: scroll;
-    background-color: $color-white;
+    background-color: $white;
     border: solid 1px #eeeeee;
   }
   &__messages {
@@ -162,7 +162,7 @@
   width: 100px;
   margin-left: 15px;
   padding: 0 30px;
-  color: $color-white;
+  color: $white;
   background-color:  #38aef0;
   border: none;
   cursor: pointer;
