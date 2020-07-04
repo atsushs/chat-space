@@ -1,11 +1,12 @@
 .side-bar
   .side-bar__header
     .side-bar__header__box
-      %p.side-bar__header__box__user-name 名前
+      %p.side-bar__header__box__user-name
+        = current_user.name
       .side-bar__header__box__menu
         = link_to "#", class: "menu__icon" do
           = icon('far fa-edit', class: "menu__edit__btn")
-        = link_to "#", class: "menu__icon" do
+        = link_to edit_user_path(current_user), class: "menu__icon" do
           = icon('fas fa-cog', class: "menu__cog__btn")
   .side-bar__groups
     .side-bar__groups__box
