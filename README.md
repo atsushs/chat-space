@@ -3,26 +3,26 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index: true|
-|email|string|null: false, unique|
-|password|string|null: false|
+|name|string|null: false, index: true, unique: true|
+|email|string|null: false, index: true, unique: true|
+|password|string|null: false, index: true, unique: true|
 
 ### Association
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+- has_many :groups, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true, unique: true|
 
-- has_many :users, through: :groups_users
-- has_many :groups_users
+- has_many :users, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 
-## groups_users
+## group_users
 
 |Column|Type|Options|
 |------|----|-------|

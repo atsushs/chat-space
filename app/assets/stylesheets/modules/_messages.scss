@@ -41,19 +41,25 @@
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
-
-  &__box {
-    &__group-name {
-      font-size: 15px;
-    }
-
-    &__latest-message {
-      font-size: 11px;
-      margin: 5px 0 40px;
-    }
-  }
 }
 
+.group {
+  margin-bottom: 40px;
+  
+  &__link-color {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__name {
+  font-size: 15px;
+  }
+
+  &__message {
+  font-size: 11px;
+  margin-top: 5px;
+  }
+}
 
 .chat-main {
   width: calc(100vw - 300px);
