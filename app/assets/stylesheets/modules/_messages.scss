@@ -63,7 +63,6 @@
 
 .chat-main {
   width: calc(100vw - 300px);
-  display: block;
 
   &__header {
     height: 100px;
@@ -72,16 +71,12 @@
     background-color: $white;
     border: solid 1px #eeeeee;
   }
+
   &__messages {
   height: calc(100vh - 190px);
   background-color: #fafafa;
   padding: 35px 40px;
   overflow: scroll;
-  }
-  &__form {
-    height: 90px;
-    background-color: #d2d2d2;
-    padding: 20px 40px;
   }
 }
 .chat-main__header {
@@ -95,6 +90,7 @@
     color: #333333;
     margin: 35px 0 15px;
   }
+
   &__members {
     font-size: 12px;
     color: #999999;
@@ -103,6 +99,7 @@
       display: inline;
     }
   }
+
   &__btn {
     $color-main-edit: #38aef0;
     height: 40px;
@@ -126,6 +123,7 @@
     font-weight: bold;
     color: #333333;
   }
+
   &__date {
     font-size: 12px;
     color: #999999;
@@ -137,39 +135,45 @@
   color: #434A54;
   margin-bottom: 46px;
 }
-.new-message {
-  display: flex;
-  justify-content: space-between;
-}
-.input-box {
-  width: 100vw;
-  position: relative;
 
-  &__text {
+
+.form {
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 40px;
+
+  &__submit {
     height: 50px;
-    width: 100%;
-    padding: 0 40px 0 10px;
-    border-style: none;
-  }
-  &__image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.3rem;
+    width: 100px;
+    margin-left: 15px;
+    padding: 0 30px;
+    color: $white;
+    background-color:  #38aef0;
+    border: none;
     cursor: pointer;
+  }
 
-    &__file {
-      display: none;
+  &__mask {
+    display: flex;
+    position: relative;
+
+    &__message {
+      height: 50px;
+      width: 100vw;
+      padding: 0 40px 0 10px;
+      border-style: none;
+    }
+
+    &__image {
+      position: absolute;
+      line-height: 50px;
+      right: 125px;
+      font-size: 1.3rem;
+      cursor: pointer;
     }
   }
 }
-.chat-main__form__submit-btn {
-  height: 50px;
-  width: 100px;
-  margin-left: 15px;
-  padding: 0 30px;
-  color: $white;
-  background-color:  #38aef0;
-  border: none;
-  cursor: pointer;
+
+.hidden {
+  display: none;
 }

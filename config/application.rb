@@ -17,3 +17,9 @@ module ChatSpace
     config.i18n.default_locale = :ja
   end
 end
+
+module TimeFormatSandbox
+  class Application < Rails::Application
+    config.time_zone = 'Asia/Tokyo'
+  end
+end
